@@ -16,4 +16,9 @@
         android:icon="@drawable/baseline_add_shopping_cart_24"
         android:title="@string/title_cart" />
 
+    <item
+        android:id="@+id/navigation_menu"
+        android:icon="@drawable/baseline_menu_24"
+        android:title="@string/title_menu" />
+
 </menu>
