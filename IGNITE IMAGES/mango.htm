@@ -1,0 +1,1994 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="ahrefs-site-verification" content="f45f11815065d21271947f04c3aca71f10343d94ef987bd29266257ed177cfde">
+		<meta name="google-site-verification" content="BcwnNXxZvo70wUnWzoz-DMq847RO0Dvl4D3PVLkIRcU" />
+		<meta name="msvalidate.01" content="63F84570D65E1D286D3A3EA5AC2D8CB2" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0">
+        <link rel="profile" href="https://gmpg.org/xfn/11">
+        <link rel="pingback" href="https://www.devgadmango.com/xmlrpc.php">
+		
+        <title>Different Types of Mangoes In India You Should Know About! &#8211; Devgad Mango</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//www.devgadmango.com' />
+<link rel='dns-prefetch' href='//static.addtoany.com' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Devgad Mango &raquo; Feed" href="https://www.devgadmango.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Devgad Mango &raquo; Comments Feed" href="https://www.devgadmango.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Devgad Mango &raquo; Different Types of Mangoes In India You Should Know About! Comments Feed" href="https://www.devgadmango.com/types-of-mangoes-in-india/feed/" />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/www.devgadmango.com\/wp-includes\/js\/wp-emoji.js?ver=1704355799","twemoji":"https:\/\/www.devgadmango.com\/wp-includes\/js\/twemoji.js?ver=1704355799"}};
+/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+/**
+ * Emoji Settings as exported in PHP via _print_emoji_detection_script().
+ * @typedef WPEmojiSettings
+ * @type {object}
+ * @property {?object} source
+ * @property {?string} source.concatemoji
+ * @property {?string} source.twemoji
+ * @property {?string} source.wpemoji
+ * @property {?boolean} DOMReady
+ * @property {?Function} readyCallback
+ */
+
+/**
+ * Support tests.
+ * @typedef SupportTests
+ * @type {object}
+ * @property {?boolean} flag
+ * @property {?boolean} emoji
+ */
+
+/**
+ * IIFE to detect emoji support and load Twemoji if needed.
+ *
+ * @param {Window} window
+ * @param {Document} document
+ * @param {WPEmojiSettings} settings
+ */
+( function wpEmojiLoader( window, document, settings ) {
+	if ( typeof Promise === 'undefined' ) {
+		return;
+	}
+
+	var sessionStorageKey = 'wpEmojiSettingsSupports';
+	var tests = [ 'flag', 'emoji' ];
+
+	/**
+	 * Checks whether the browser supports offloading to a Worker.
+	 *
+	 * @since 6.3.0
+	 *
+	 * @private
+	 *
+	 * @returns {boolean}
+	 */
+	function supportsWorkerOffloading() {
+		return (
+			typeof Worker !== 'undefined' &&
+			typeof OffscreenCanvas !== 'undefined' &&
+			typeof URL !== 'undefined' &&
+			URL.createObjectURL &&
+			typeof Blob !== 'undefined'
+		);
+	}
+
+	/**
+	 * @typedef SessionSupportTests
+	 * @type {object}
+	 * @property {number} timestamp
+	 * @property {SupportTests} supportTests
+	 */
+
+	/**
+	 * Get support tests from session.
+	 *
+	 * @since 6.3.0
+	 *
+	 * @private
+	 *
+	 * @returns {?SupportTests} Support tests, or null if not set or older than 1 week.
+	 */
+	function getSessionSupportTests() {
+		try {
+			/** @type {SessionSupportTests} */
+			var item = JSON.parse(
+				sessionStorage.getItem( sessionStorageKey )
+			);
+			if (
+				typeof item === 'object' &&
+				typeof item.timestamp === 'number' &&
+				new Date().valueOf() < item.timestamp + 604800 && // Note: Number is a week in seconds.
+				typeof item.supportTests === 'object'
+			) {
+				return item.supportTests;
+			}
+		} catch ( e ) {}
+		return null;
+	}
+
+	/**
+	 * Persist the supports in session storage.
+	 *
+	 * @since 6.3.0
+	 *
+	 * @private
+	 *
+	 * @param {SupportTests} supportTests Support tests.
+	 */
+	function setSessionSupportTests( supportTests ) {
+		try {
+			/** @type {SessionSupportTests} */
+			var item = {
+				supportTests: supportTests,
+				timestamp: new Date().valueOf()
+			};
+
+			sessionStorage.setItem(
+				sessionStorageKey,
+				JSON.stringify( item )
+			);
+		} catch ( e ) {}
+	}
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * This function may be serialized to run in a Worker. Therefore, it cannot refer to variables from the containing
+	 * scope. Everything must be passed by parameters.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {CanvasRenderingContext2D} context 2D Context.
+	 * @param {string} set1 Set of Emoji to test.
+	 * @param {string} set2 Set of Emoji to test.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( context, set1, set2 ) {
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, context.canvas.width, context.canvas.height );
+		context.fillText( set1, 0, 0 );
+		var rendered1 = new Uint32Array(
+			context.getImageData(
+				0,
+				0,
+				context.canvas.width,
+				context.canvas.height
+			).data
+		);
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, context.canvas.width, context.canvas.height );
+		context.fillText( set2, 0, 0 );
+		var rendered2 = new Uint32Array(
+			context.getImageData(
+				0,
+				0,
+				context.canvas.width,
+				context.canvas.height
+			).data
+		);
+
+		return rendered1.every( function ( rendered2Data, index ) {
+			return rendered2Data === rendered2[ index ];
+		} );
+	}
+
+	/**
+	 * Determines if the browser properly renders Emoji that Twemoji can supplement.
+	 *
+	 * This function may be serialized to run in a Worker. Therefore, it cannot refer to variables from the containing
+	 * scope. Everything must be passed by parameters.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {CanvasRenderingContext2D} context 2D Context.
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 * @param {Function} emojiSetsRenderIdentically Reference to emojiSetsRenderIdentically function, needed due to minification.
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( context, type, emojiSetsRenderIdentically ) {
+		var isIdentical;
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. Added in Unicode 13.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					context,
+					'\uD83C\uDFF3\uFE0F\u200D\u26A7\uFE0F', // as a zero-width joiner sequence
+					'\uD83C\uDFF3\uFE0F\u200B\u26A7\uFE0F' // separated by a zero-width space
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					context,
+					'\uD83C\uDDFA\uD83C\uDDF3', // as the sequence of two code points
+					'\uD83C\uDDFA\u200B\uD83C\uDDF3' // as the two code points separated by a zero-width space
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather a five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					context,
+					// as the flag sequence
+					'\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC65\uDB40\uDC6E\uDB40\uDC67\uDB40\uDC7F',
+					// with each code point separated by a zero-width space
+					'\uD83C\uDFF4\u200B\uDB40\uDC67\u200B\uDB40\uDC62\u200B\uDB40\uDC65\u200B\uDB40\uDC6E\u200B\uDB40\uDC67\u200B\uDB40\uDC7F'
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Why can't we be friends? Everyone can now shake hands in emoji, regardless of skin tone!
+				 *
+				 * To test for Emoji 14.0 support, try to render a new emoji: Handshake: Light Skin Tone, Dark Skin Tone.
+				 *
+				 * The Handshake: Light Skin Tone, Dark Skin Tone emoji is a ZWJ sequence combining 🫱 Rightwards Hand,
+				 * 🏻 Light Skin Tone, a Zero Width Joiner, 🫲 Leftwards Hand, and 🏿 Dark Skin Tone.
+				 *
+				 * 0x1FAF1 == Rightwards Hand
+				 * 0x1F3FB == Light Skin Tone
+				 * 0x200D == Zero-Width Joiner (ZWJ) that links the code points for the new emoji or
+				 * 0x200B == Zero-Width Space (ZWS) that is rendered for clients not supporting the new emoji.
+				 * 0x1FAF2 == Leftwards Hand
+				 * 0x1F3FF == Dark Skin Tone.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					context,
+					'\uD83E\uDEF1\uD83C\uDFFB\u200D\uD83E\uDEF2\uD83C\uDFFF', // as the zero-width joiner sequence
+					'\uD83E\uDEF1\uD83C\uDFFB\u200B\uD83E\uDEF2\uD83C\uDFFF' // separated by a zero-width space
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Checks emoji support tests.
+	 *
+	 * This function may be serialized to run in a Worker. Therefore, it cannot refer to variables from the containing
+	 * scope. Everything must be passed by parameters.
+	 *
+	 * @since 6.3.0
+	 *
+	 * @private
+	 *
+	 * @param {string[]} tests Tests.
+	 * @param {Function} browserSupportsEmoji Reference to browserSupportsEmoji function, needed due to minification.
+	 * @param {Function} emojiSetsRenderIdentically Reference to emojiSetsRenderIdentically function, needed due to minification.
+	 *
+	 * @return {SupportTests} Support tests.
+	 */
+	function testEmojiSupports( tests, browserSupportsEmoji, emojiSetsRenderIdentically ) {
+		var canvas;
+		if (
+			typeof WorkerGlobalScope !== 'undefined' &&
+			self instanceof WorkerGlobalScope
+		) {
+			canvas = new OffscreenCanvas( 300, 150 ); // Dimensions are default for HTMLCanvasElement.
+		} else {
+			canvas = document.createElement( 'canvas' );
+		}
+
+		var context = canvas.getContext( '2d', { willReadFrequently: true } );
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		var supports = {};
+		tests.forEach( function ( test ) {
+			supports[ test ] = browserSupportsEmoji( context, test, emojiSetsRenderIdentically );
+		} );
+		return supports;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {string} src The url where the script is located.
+	 *
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+		script.src = src;
+		script.defer = true;
+		document.head.appendChild( script );
+	}
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	// Create a promise for DOMContentLoaded since the worker logic may finish after the event has fired.
+	var domReadyPromise = new Promise( function ( resolve ) {
+		document.addEventListener( 'DOMContentLoaded', resolve, {
+			once: true
+		} );
+	} );
+
+	// Obtain the emoji support from the browser, asynchronously when possible.
+	new Promise( function ( resolve ) {
+		var supportTests = getSessionSupportTests();
+		if ( supportTests ) {
+			resolve( supportTests );
+			return;
+		}
+
+		if ( supportsWorkerOffloading() ) {
+			try {
+				// Note that the functions are being passed as arguments due to minification.
+				var workerScript =
+					'postMessage(' +
+					testEmojiSupports.toString() +
+					'(' +
+					[
+						JSON.stringify( tests ),
+						browserSupportsEmoji.toString(),
+						emojiSetsRenderIdentically.toString()
+					].join( ',' ) +
+					'));';
+				var blob = new Blob( [ workerScript ], {
+					type: 'text/javascript'
+				} );
+				var worker = new Worker( URL.createObjectURL( blob ), { name: 'wpTestEmojiSupports' } );
+				worker.onmessage = function ( event ) {
+					supportTests = event.data;
+					setSessionSupportTests( supportTests );
+					worker.terminate();
+					resolve( supportTests );
+				};
+				return;
+			} catch ( e ) {}
+		}
+
+		supportTests = testEmojiSupports( tests, browserSupportsEmoji, emojiSetsRenderIdentically );
+		setSessionSupportTests( supportTests );
+		resolve( supportTests );
+	} )
+		// Once the browser emoji support has been obtained from the session, finalize the settings.
+		.then( function ( supportTests ) {
+			/*
+			 * Tests the browser support for flag emojis and other emojis, and adjusts the
+			 * support settings accordingly.
+			 */
+			for ( var test in supportTests ) {
+				settings.supports[ test ] = supportTests[ test ];
+
+				settings.supports.everything =
+					settings.supports.everything && settings.supports[ test ];
+
+				if ( 'flag' !== test ) {
+					settings.supports.everythingExceptFlag =
+						settings.supports.everythingExceptFlag &&
+						settings.supports[ test ];
+				}
+			}
+
+			settings.supports.everythingExceptFlag =
+				settings.supports.everythingExceptFlag &&
+				! settings.supports.flag;
+
+			// Sets DOMReady to false and assigns a ready function to settings.
+			settings.DOMReady = false;
+			settings.readyCallback = function () {
+				settings.DOMReady = true;
+			};
+		} )
+		.then( function () {
+			return domReadyPromise;
+		} )
+		.then( function () {
+			// When the browser can not render everything we need to load a polyfill.
+			if ( ! settings.supports.everything ) {
+				settings.readyCallback();
+
+				var src = settings.source || {};
+
+				if ( src.concatemoji ) {
+					addScript( src.concatemoji );
+				} else if ( src.wpemoji && src.twemoji ) {
+					addScript( src.twemoji );
+					addScript( src.wpemoji );
+				}
+			}
+		} );
+} )( window, document, window._wpemojiSettings );
+</script>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.devgadmango.com/wp-includes/css/dist/block-library/style.css?ver=1706679777' media='all' />
+<style id='wp-block-library-theme-inline-css'>
+.wp-block-audio figcaption{
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .wp-block-audio figcaption{
+  color:hsla(0,0%,100%,.65);
+}
+
+.wp-block-audio{
+  margin:0 0 1em;
+}
+
+.wp-block-code{
+  border:1px solid #ccc;
+  border-radius:4px;
+  font-family:Menlo,Consolas,monaco,monospace;
+  padding:.8em 1em;
+}
+
+.wp-block-embed figcaption{
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .wp-block-embed figcaption{
+  color:hsla(0,0%,100%,.65);
+}
+
+.wp-block-embed{
+  margin:0 0 1em;
+}
+
+.blocks-gallery-caption{
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .blocks-gallery-caption{
+  color:hsla(0,0%,100%,.65);
+}
+
+.wp-block-image figcaption{
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .wp-block-image figcaption{
+  color:hsla(0,0%,100%,.65);
+}
+
+.wp-block-image{
+  margin:0 0 1em;
+}
+
+.wp-block-pullquote{
+  border-bottom:4px solid;
+  border-top:4px solid;
+  color:currentColor;
+  margin-bottom:1.75em;
+}
+.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{
+  color:currentColor;
+  font-size:.8125em;
+  font-style:normal;
+  text-transform:uppercase;
+}
+
+.wp-block-quote{
+  border-left:.25em solid;
+  margin:0 0 1.75em;
+  padding-left:1em;
+}
+.wp-block-quote cite,.wp-block-quote footer{
+  color:currentColor;
+  font-size:.8125em;
+  font-style:normal;
+  position:relative;
+}
+.wp-block-quote.has-text-align-right{
+  border-left:none;
+  border-right:.25em solid;
+  padding-left:0;
+  padding-right:1em;
+}
+.wp-block-quote.has-text-align-center{
+  border:none;
+  padding-left:0;
+}
+.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{
+  border:none;
+}
+
+.wp-block-search .wp-block-search__label{
+  font-weight:700;
+}
+
+.wp-block-search__button{
+  border:1px solid #ccc;
+  padding:.375em .625em;
+}
+
+:where(.wp-block-group.has-background){
+  padding:1.25em 2.375em;
+}
+
+.wp-block-separator.has-css-opacity{
+  opacity:.4;
+}
+
+.wp-block-separator{
+  border:none;
+  border-bottom:2px solid;
+  margin-left:auto;
+  margin-right:auto;
+}
+.wp-block-separator.has-alpha-channel-opacity{
+  opacity:1;
+}
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots){
+  width:100px;
+}
+.wp-block-separator.has-background:not(.is-style-dots){
+  border-bottom:none;
+  height:1px;
+}
+.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){
+  height:2px;
+}
+
+.wp-block-table{
+  margin:0 0 1em;
+}
+.wp-block-table td,.wp-block-table th{
+  word-break:normal;
+}
+.wp-block-table figcaption{
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .wp-block-table figcaption{
+  color:hsla(0,0%,100%,.65);
+}
+
+.wp-block-video figcaption{
+  color:#555;
+  font-size:13px;
+  text-align:center;
+}
+.is-dark-theme .wp-block-video figcaption{
+  color:hsla(0,0%,100%,.65);
+}
+
+.wp-block-video{
+  margin:0 0 1em;
+}
+
+.wp-block-template-part.has-background{
+  margin-bottom:0;
+  margin-top:0;
+  padding:1.25em 2.375em;
+}
+</style>
+<link rel='stylesheet' id='wc-blocks-vendors-style-css' href='https://www.devgadmango.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=1681569050' media='all' />
+<link rel='stylesheet' id='wc-blocks-style-css' href='https://www.devgadmango.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=1681569050' media='all' />
+<link rel='stylesheet' id='storefront-gutenberg-blocks-css' href='https://www.devgadmango.com/wp-content/themes/storefront/assets/css/base/gutenberg-blocks.css?ver=1678955976' media='all' />
+<style id='storefront-gutenberg-blocks-inline-css'>
+
+				.wp-block-button__link:not(.has-text-color) {
+					color: #333333;
+				}
+
+				.wp-block-button__link:not(.has-text-color):hover,
+				.wp-block-button__link:not(.has-text-color):focus,
+				.wp-block-button__link:not(.has-text-color):active {
+					color: #333333;
+				}
+
+				.wp-block-button__link:not(.has-background) {
+					background-color: #eeeeee;
+				}
+
+				.wp-block-button__link:not(.has-background):hover,
+				.wp-block-button__link:not(.has-background):focus,
+				.wp-block-button__link:not(.has-background):active {
+					border-color: #d5d5d5;
+					background-color: #d5d5d5;
+				}
+
+				.wp-block-quote footer,
+				.wp-block-quote cite,
+				.wp-block-quote__citation {
+					color: #6d6d6d;
+				}
+
+				.wp-block-pullquote cite,
+				.wp-block-pullquote footer,
+				.wp-block-pullquote__citation {
+					color: #6d6d6d;
+				}
+
+				.wp-block-image figcaption {
+					color: #6d6d6d;
+				}
+
+				.wp-block-separator.is-style-dots::before {
+					color: #333333;
+				}
+
+				.wp-block-file a.wp-block-file__button {
+					color: #333333;
+					background-color: #eeeeee;
+					border-color: #eeeeee;
+				}
+
+				.wp-block-file a.wp-block-file__button:hover,
+				.wp-block-file a.wp-block-file__button:focus,
+				.wp-block-file a.wp-block-file__button:active {
+					color: #333333;
+					background-color: #d5d5d5;
+				}
+
+				.wp-block-code,
+				.wp-block-preformatted pre {
+					color: #6d6d6d;
+				}
+
+				.wp-block-table:not( .has-background ):not( .is-style-stripes ) tbody tr:nth-child(2n) td {
+					background-color: #fdfdfd;
+				}
+
+				.wp-block-cover .wp-block-cover__inner-container h1:not(.has-text-color),
+				.wp-block-cover .wp-block-cover__inner-container h2:not(.has-text-color),
+				.wp-block-cover .wp-block-cover__inner-container h3:not(.has-text-color),
+				.wp-block-cover .wp-block-cover__inner-container h4:not(.has-text-color),
+				.wp-block-cover .wp-block-cover__inner-container h5:not(.has-text-color),
+				.wp-block-cover .wp-block-cover__inner-container h6:not(.has-text-color) {
+					color: #000000;
+				}
+
+				.wc-block-components-price-slider__range-input-progress,
+				.rtl .wc-block-components-price-slider__range-input-progress {
+					--range-color: #7f54b3;
+				}
+
+				/* Target only IE11 */
+				@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+					.wc-block-components-price-slider__range-input-progress {
+						background: #7f54b3;
+					}
+				}
+
+				.wc-block-components-button:not(.is-link) {
+					background-color: #333333;
+					color: #ffffff;
+				}
+
+				.wc-block-components-button:not(.is-link):hover,
+				.wc-block-components-button:not(.is-link):focus,
+				.wc-block-components-button:not(.is-link):active {
+					background-color: #1a1a1a;
+					color: #ffffff;
+				}
+
+				.wc-block-components-button:not(.is-link):disabled {
+					background-color: #333333;
+					color: #ffffff;
+				}
+
+				.wc-block-cart__submit-container {
+					background-color: #ffffff;
+				}
+
+				.wc-block-cart__submit-container::before {
+					color: rgba(220,220,220,0.5);
+				}
+
+				.wc-block-components-order-summary-item__quantity {
+					background-color: #ffffff;
+					border-color: #6d6d6d;
+					box-shadow: 0 0 0 2px #ffffff;
+					color: #6d6d6d;
+				}
+			
+</style>
+<style id='classic-theme-styles-inline-css'>
+/**
+ * These rules are needed for backwards compatibility.
+ * They should match the button element rules in the base theme.json file.
+ */
+.wp-block-button__link {
+	color: #ffffff;
+	background-color: #32373c;
+	border-radius: 9999px; /* 100% causes an oval, but any explicit but really high value retains the pill shape. */
+
+	/* This needs a low specificity so it won't override the rules from the button element if defined in theme.json. */
+	box-shadow: none;
+	text-decoration: none;
+
+	/* The extra 2px are added to size solids the same as the outline versions.*/
+	padding: calc(0.667em + 2px) calc(1.333em + 2px);
+
+	font-size: 1.125em;
+}
+
+.wp-block-file__button {
+	background: #32373c;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+</style>
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 23px;--wp--preset--font-size--large: 26px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 16px;--wp--preset--font-size--huge: 37px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='woof-css' href='https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/css/front.css?ver=1681569049' media='all' />
+<style id='woof-inline-css'>
+
+.woof_products_top_panel li span, .woof_products_top_panel2 li span{background: url(https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/img/delete.png);background-size: 14px 14px;background-repeat: no-repeat;background-position: right;}
+.woof_edit_view{
+                    display: none;
+                }
+
+</style>
+<link rel='stylesheet' id='chosen-drop-down-css' href='https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/js/chosen/chosen.min.css?ver=1681569049' media='all' />
+<style id='woocommerce-inline-inline-css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='parent-style-css' href='https://www.devgadmango.com/wp-content/themes/storefront/style.css?ver=1678955976' media='all' />
+<link rel='stylesheet' id='bootstrapcss-css' href='https://www.devgadmango.com/wp-content/themes/storefront-child-copy-1/assets/bootstrap-4/css/bootstrap.min.css?ver=1678956538' media='all' />
+<link rel='stylesheet' id='magnific-popup-css' href='https://www.devgadmango.com/wp-content/themes/storefront-child-copy-1/assets/magnific/magnific-popup.css?ver=1678956538' media='all' />
+<link rel='stylesheet' id='custom-style-css' href='https://www.devgadmango.com/wp-content/themes/storefront-child-copy-1/assets/css/style.css?ver=1678956538' media='all' />
+<link rel='stylesheet' id='slick-css' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css?ver=1708761811' media='all' />
+<link rel='stylesheet' id='slick-theme-css' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css?ver=1708761811' media='all' />
+<link rel='stylesheet' id='normal-prod-css' href='https://www.devgadmango.com/wp-content/themes/storefront-child-copy-1/assets/css/normal-prod.css?ver=1678956538' media='all' />
+<link rel='stylesheet' id='my-google-fonts-css' href='https://fonts.googleapis.com/css?family=Baloo%7COpen+Sans%3A400%2C600&#038;display=swap&#038;ver=1708761811' media='all' />
+<link rel='stylesheet' id='storefront-style-css' href='https://www.devgadmango.com/wp-content/themes/storefront/style.css?ver=1678955976' media='all' />
+<style id='storefront-style-inline-css'>
+
+			.main-navigation ul li a,
+			.site-title a,
+			ul.menu li a,
+			.site-branding h1 a,
+			button.menu-toggle,
+			button.menu-toggle:hover,
+			.handheld-navigation .dropdown-toggle {
+				color: #333333;
+			}
+
+			button.menu-toggle,
+			button.menu-toggle:hover {
+				border-color: #333333;
+			}
+
+			.main-navigation ul li a:hover,
+			.main-navigation ul li:hover > a,
+			.site-title a:hover,
+			.site-header ul.menu li.current-menu-item > a {
+				color: #747474;
+			}
+
+			table:not( .has-background ) th {
+				background-color: #f8f8f8;
+			}
+
+			table:not( .has-background ) tbody td {
+				background-color: #fdfdfd;
+			}
+
+			table:not( .has-background ) tbody tr:nth-child(2n) td,
+			fieldset,
+			fieldset legend {
+				background-color: #fbfbfb;
+			}
+
+			.site-header,
+			.secondary-navigation ul ul,
+			.main-navigation ul.menu > li.menu-item-has-children:after,
+			.secondary-navigation ul.menu ul,
+			.storefront-handheld-footer-bar,
+			.storefront-handheld-footer-bar ul li > a,
+			.storefront-handheld-footer-bar ul li.search .site-search,
+			button.menu-toggle,
+			button.menu-toggle:hover {
+				background-color: #ffffff;
+			}
+
+			p.site-description,
+			.site-header,
+			.storefront-handheld-footer-bar {
+				color: #404040;
+			}
+
+			button.menu-toggle:after,
+			button.menu-toggle:before,
+			button.menu-toggle span:before {
+				background-color: #333333;
+			}
+
+			h1, h2, h3, h4, h5, h6, .wc-block-grid__product-title {
+				color: #333333;
+			}
+
+			.widget h1 {
+				border-bottom-color: #333333;
+			}
+
+			body,
+			.secondary-navigation a {
+				color: #6d6d6d;
+			}
+
+			.widget-area .widget a,
+			.hentry .entry-header .posted-on a,
+			.hentry .entry-header .post-author a,
+			.hentry .entry-header .post-comments a,
+			.hentry .entry-header .byline a {
+				color: #727272;
+			}
+
+			a {
+				color: #7f54b3;
+			}
+
+			a:focus,
+			button:focus,
+			.button.alt:focus,
+			input:focus,
+			textarea:focus,
+			input[type="button"]:focus,
+			input[type="reset"]:focus,
+			input[type="submit"]:focus,
+			input[type="email"]:focus,
+			input[type="tel"]:focus,
+			input[type="url"]:focus,
+			input[type="password"]:focus,
+			input[type="search"]:focus {
+				outline-color: #7f54b3;
+			}
+
+			button, input[type="button"], input[type="reset"], input[type="submit"], .button, .widget a.button {
+				background-color: #eeeeee;
+				border-color: #eeeeee;
+				color: #333333;
+			}
+
+			button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .widget a.button:hover {
+				background-color: #d5d5d5;
+				border-color: #d5d5d5;
+				color: #333333;
+			}
+
+			button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .widget-area .widget a.button.alt {
+				background-color: #333333;
+				border-color: #333333;
+				color: #ffffff;
+			}
+
+			button.alt:hover, input[type="button"].alt:hover, input[type="reset"].alt:hover, input[type="submit"].alt:hover, .button.alt:hover, .widget-area .widget a.button.alt:hover {
+				background-color: #1a1a1a;
+				border-color: #1a1a1a;
+				color: #ffffff;
+			}
+
+			.pagination .page-numbers li .page-numbers.current {
+				background-color: #e6e6e6;
+				color: #636363;
+			}
+
+			#comments .comment-list .comment-content .comment-text {
+				background-color: #f8f8f8;
+			}
+
+			.site-footer {
+				background-color: #f0f0f0;
+				color: #6d6d6d;
+			}
+
+			.site-footer a:not(.button):not(.components-button) {
+				color: #f78616;
+			}
+
+			.site-footer .storefront-handheld-footer-bar a:not(.button):not(.components-button) {
+				color: #333333;
+			}
+
+			.site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6, .site-footer .widget .widget-title, .site-footer .widget .widgettitle {
+				color: #e0e0e0;
+			}
+
+			.page-template-template-homepage.has-post-thumbnail .type-page.has-post-thumbnail .entry-title {
+				color: #000000;
+			}
+
+			.page-template-template-homepage.has-post-thumbnail .type-page.has-post-thumbnail .entry-content {
+				color: #000000;
+			}
+
+			@media screen and ( min-width: 768px ) {
+				.secondary-navigation ul.menu a:hover {
+					color: #595959;
+				}
+
+				.secondary-navigation ul.menu a {
+					color: #404040;
+				}
+
+				.main-navigation ul.menu ul.sub-menu,
+				.main-navigation ul.nav-menu ul.children {
+					background-color: #f0f0f0;
+				}
+
+				.site-header {
+					border-bottom-color: #f0f0f0;
+				}
+			}
+</style>
+<link rel='stylesheet' id='storefront-icons-css' href='https://www.devgadmango.com/wp-content/themes/storefront/assets/css/base/icons.css?ver=1678955976' media='all' />
+<link rel='stylesheet' id='storefront-fonts-css' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C300%2C300italic%2C400italic%2C600%2C700%2C900&#038;subset=latin%2Clatin-ext&#038;ver=1708761811' media='all' />
+<link rel='stylesheet' id='addtoany-css' href='https://www.devgadmango.com/wp-content/plugins/add-to-any/addtoany.min.css?ver=1681569050' media='all' />
+<link rel='stylesheet' id='woo-wallet-style-css' href='https://www.devgadmango.com/wp-content/plugins/woo-wallet/assets/css/frontend.css?ver=1681569049' media='all' />
+<link rel='stylesheet' id='storefront-woocommerce-style-css' href='https://www.devgadmango.com/wp-content/themes/storefront/assets/css/woocommerce/woocommerce.css?ver=1678955976' media='all' />
+<style id='storefront-woocommerce-style-inline-css'>
+@font-face {
+				font-family: star;
+				src: url(https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/fonts/star.eot);
+				src:
+					url(https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/fonts/star.eot?#iefix) format("embedded-opentype"),
+					url(https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/fonts/star.woff) format("woff"),
+					url(https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/fonts/star.ttf) format("truetype"),
+					url(https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/fonts/star.svg#star) format("svg");
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: WooCommerce;
+				src: url(https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.eot);
+				src:
+					url(https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.eot?#iefix) format("embedded-opentype"),
+					url(https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.woff) format("woff"),
+					url(https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.ttf) format("truetype"),
+					url(https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce) format("svg");
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			a.cart-contents,
+			.site-header-cart .widget_shopping_cart a {
+				color: #333333;
+			}
+
+			a.cart-contents:hover,
+			.site-header-cart .widget_shopping_cart a:hover,
+			.site-header-cart:hover > li > a {
+				color: #747474;
+			}
+
+			table.cart td.product-remove,
+			table.cart td.actions {
+				border-top-color: #ffffff;
+			}
+
+			.storefront-handheld-footer-bar ul li.cart .count {
+				background-color: #333333;
+				color: #ffffff;
+				border-color: #ffffff;
+			}
+
+			.woocommerce-tabs ul.tabs li.active a,
+			ul.products li.product .price,
+			.onsale,
+			.wc-block-grid__product-onsale,
+			.widget_search form:before,
+			.widget_product_search form:before {
+				color: #6d6d6d;
+			}
+
+			.woocommerce-breadcrumb a,
+			a.woocommerce-review-link,
+			.product_meta a {
+				color: #727272;
+			}
+
+			.wc-block-grid__product-onsale,
+			.onsale {
+				border-color: #6d6d6d;
+			}
+
+			.star-rating span:before,
+			.quantity .plus, .quantity .minus,
+			p.stars a:hover:after,
+			p.stars a:after,
+			.star-rating span:before,
+			#payment .payment_methods li input[type=radio]:first-child:checked+label:before {
+				color: #7f54b3;
+			}
+
+			.widget_price_filter .ui-slider .ui-slider-range,
+			.widget_price_filter .ui-slider .ui-slider-handle {
+				background-color: #7f54b3;
+			}
+
+			.order_details {
+				background-color: #f8f8f8;
+			}
+
+			.order_details > li {
+				border-bottom: 1px dotted #e3e3e3;
+			}
+
+			.order_details:before,
+			.order_details:after {
+				background: -webkit-linear-gradient(transparent 0,transparent 0),-webkit-linear-gradient(135deg,#f8f8f8 33.33%,transparent 33.33%),-webkit-linear-gradient(45deg,#f8f8f8 33.33%,transparent 33.33%)
+			}
+
+			#order_review {
+				background-color: #ffffff;
+			}
+
+			#payment .payment_methods > li .payment_box,
+			#payment .place-order {
+				background-color: #fafafa;
+			}
+
+			#payment .payment_methods > li:not(.woocommerce-notice) {
+				background-color: #f5f5f5;
+			}
+
+			#payment .payment_methods > li:not(.woocommerce-notice):hover {
+				background-color: #f0f0f0;
+			}
+
+			.woocommerce-pagination .page-numbers li .page-numbers.current {
+				background-color: #e6e6e6;
+				color: #636363;
+			}
+
+			.wc-block-grid__product-onsale,
+			.onsale,
+			.woocommerce-pagination .page-numbers li .page-numbers:not(.current) {
+				color: #6d6d6d;
+			}
+
+			p.stars a:before,
+			p.stars a:hover~a:before,
+			p.stars.selected a.active~a:before {
+				color: #6d6d6d;
+			}
+
+			p.stars.selected a.active:before,
+			p.stars:hover a:before,
+			p.stars.selected a:not(.active):before,
+			p.stars.selected a.active:before {
+				color: #7f54b3;
+			}
+
+			.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+				background-color: #eeeeee;
+				color: #333333;
+			}
+
+			.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger:hover {
+				background-color: #d5d5d5;
+				border-color: #d5d5d5;
+				color: #333333;
+			}
+
+			.button.added_to_cart:focus,
+			.button.wc-forward:focus {
+				outline-color: #7f54b3;
+			}
+
+			.added_to_cart,
+			.site-header-cart .widget_shopping_cart a.button,
+			.wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+				background-color: #eeeeee;
+				border-color: #eeeeee;
+				color: #333333;
+			}
+
+			.added_to_cart:hover,
+			.site-header-cart .widget_shopping_cart a.button:hover,
+			.wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
+				background-color: #d5d5d5;
+				border-color: #d5d5d5;
+				color: #333333;
+			}
+
+			.added_to_cart.alt, .added_to_cart, .widget a.button.checkout {
+				background-color: #333333;
+				border-color: #333333;
+				color: #ffffff;
+			}
+
+			.added_to_cart.alt:hover, .added_to_cart:hover, .widget a.button.checkout:hover {
+				background-color: #1a1a1a;
+				border-color: #1a1a1a;
+				color: #ffffff;
+			}
+
+			.button.loading {
+				color: #eeeeee;
+			}
+
+			.button.loading:hover {
+				background-color: #eeeeee;
+			}
+
+			.button.loading:after {
+				color: #333333;
+			}
+
+			@media screen and ( min-width: 768px ) {
+				.site-header-cart .widget_shopping_cart,
+				.site-header .product_list_widget li .quantity {
+					color: #404040;
+				}
+
+				.site-header-cart .widget_shopping_cart .buttons,
+				.site-header-cart .widget_shopping_cart .total {
+					background-color: #f5f5f5;
+				}
+
+				.site-header-cart .widget_shopping_cart {
+					background-color: #f0f0f0;
+				}
+			}
+				.storefront-product-pagination a {
+					color: #6d6d6d;
+					background-color: #ffffff;
+				}
+				.storefront-sticky-add-to-cart {
+					color: #6d6d6d;
+					background-color: #ffffff;
+				}
+
+				.storefront-sticky-add-to-cart a:not(.button) {
+					color: #333333;
+				}
+</style>
+<link rel='stylesheet' id='storefront-child-style-css' href='https://www.devgadmango.com/wp-content/themes/storefront-child-copy-1/style.css?ver=1678956591' media='all' />
+<link rel='stylesheet' id='alr-ajax-css' href='https://www.devgadmango.com/wp-content/plugins/woo-ajax-loginregister/assets/css/style.css?ver=1681569049' media='all' />
+<script src="https://www.devgadmango.com/wp-content/themes/storefront-child-copy-1/assets/bootstrap-4/js/jquery.min.js?ver=1678956538" id="jquery-js"></script>
+<script id="addtoany-core-js-before">
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+a2a_config.icon_color="transparent,#4d3400";
+</script>
+<script async src="https://static.addtoany.com/menu/page.js?ver=1708761811" id="addtoany-core-js"></script>
+<script async src="https://www.devgadmango.com/wp-content/plugins/add-to-any/addtoany.min.js?ver=1681569049" id="addtoany-jquery-js"></script>
+<script src="https://www.devgadmango.com/wp-content/plugins/handl-utm-grabber/js/js.cookie.js?ver=1681569049" id="js.cookie-js"></script>
+<script id="handl-utm-grabber-js-extra">
+var handl_utm = [];
+</script>
+<script src="https://www.devgadmango.com/wp-content/plugins/handl-utm-grabber/js/handl-utm-grabber.js?ver=1681569049" id="handl-utm-grabber-js"></script>
+<script src="https://www.devgadmango.com/wp-content/themes/storefront-child-copy-1/js/custom.js?ver=1678956538" id="custom-js-js"></script>
+<script id="alr-ajax-js-extra">
+var zorem_ajax_object = {"ajax_url":"https:\/\/www.devgadmango.com\/wp-admin\/admin-ajax.php","required_message":"Please fill all required fields.","valid_email":"Please Enter valid email.","loading_text":"Loading...","plugin_dir_url":"https:\/\/www.devgadmango.com\/wp-content\/plugins\/woo-ajax-loginregister\/"};
+</script>
+<script src="https://www.devgadmango.com/wp-content/plugins/woo-ajax-loginregister/assets/js/script.js?ver=1681569049" id="alr-ajax-js"></script>
+<script>
+window.wc_ga_pro = {};
+
+window.wc_ga_pro.ajax_url = 'https://www.devgadmango.com/wp-admin/admin-ajax.php';
+
+window.wc_ga_pro.available_gateways = {"razorpay":"RazorPay","wallet":"Pay with Balance"};
+
+// interpolate json by replacing placeholders with variables
+window.wc_ga_pro.interpolate_json = function( object, variables ) {
+
+	if ( ! variables ) {
+		return object;
+	}
+
+	var j = JSON.stringify( object );
+
+	for ( var k in variables ) {
+		j = j.split( '{$' + k + '}' ).join( variables[ k ] );
+	}
+
+	return JSON.parse( j );
+};
+
+// return the title for a payment gateway
+window.wc_ga_pro.get_payment_method_title = function( payment_method ) {
+	return window.wc_ga_pro.available_gateways[ payment_method ] || payment_method;
+};
+
+// check if an email is valid
+window.wc_ga_pro.is_valid_email = function( email ) {
+  return /[^\s@]+@[^\s@]+\.[^\s@]+/.test( email );
+};
+
+</script>
+<!-- Start WooCommerce Google Analytics Pro -->
+		<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga( 'create', 'UA-13149573-2', {"cookieDomain":"auto"} );
+	ga( 'set', 'forceSSL', true );
+	ga( 'require', 'displayfeatures' );
+	ga( 'require', 'linkid' );
+	ga( 'require', 'ec' );
+
+	</script>
+		<!-- end WooCommerce Google Analytics Pro -->
+		<link rel="https://api.w.org/" href="https://www.devgadmango.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.devgadmango.com/wp-json/wp/v2/posts/5301" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.devgadmango.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.4.3" />
+<meta name="generator" content="WooCommerce 6.3.1" />
+<link rel="canonical" href="https://www.devgadmango.com/types-of-mangoes-in-india/" />
+<link rel='shortlink' href='https://www.devgadmango.com/?p=5301' />
+<link rel="alternate" type="application/json+oembed" href="https://www.devgadmango.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.devgadmango.com%2Ftypes-of-mangoes-in-india%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.devgadmango.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.devgadmango.com%2Ftypes-of-mangoes-in-india%2F&#038;format=xml" />
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<link rel="icon" href="https://www.devgadmango.com/wp-content/uploads/2019/11/Devgad-mango-favicon-144x144px-100x100.png" sizes="32x32" />
+<link rel="icon" href="https://www.devgadmango.com/wp-content/uploads/2019/11/Devgad-mango-favicon-144x144px.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.devgadmango.com/wp-content/uploads/2019/11/Devgad-mango-favicon-144x144px.png" />
+<meta name="msapplication-TileImage" content="https://www.devgadmango.com/wp-content/uploads/2019/11/Devgad-mango-favicon-144x144px.png" />
+        <style type="text/css" id="slider-css"></style>
+        <!-- Conidtion for only main -->
+				
+		<script>
+  (function() {
+    var ta = document.createElement('script'); ta.type = 'text/javascript'; ta.async = true;
+    ta.src = 'https://analytics.tiktok.com/i18n/pixel/sdk.js?sdkid=BQ6NH24QP0VRFSP53LI0';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ta, s);
+  })();
+</script>
+		
+		<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1617874335204031');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1617874335204031&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+		
+<!-- Global site tag (gtag.js) - Google Ads: 658983232 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-658983232"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-658983232');
+</script>
+			
+		    </head>
+
+    <body class="post-template-default single single-post postid-5301 single-format-standard wp-embed-responsive theme-storefront woocommerce-no-js pmn-cart-empty group-blog storefront-full-width-content storefront-align-wide right-sidebar woocommerce-active">
+		
+		
+        
+        <div id="page" class="hfeed site">
+            
+            <header id="masthead" class="site-header" role="banner" style="">
+
+                
+
+                <div id="fixnav">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col pm-header-nav">
+                                <div class="navbar-brand">
+                                                                                                                                                </div>
+                                                                    <div class="navbar">
+                                                                                    <div class="nav-container">
+                                                <div class="menu-primary-container"><ul id="menu-primary" class="nav desktop nav-bar"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-211"><a title="Home" href="https://www.devgadmango.com/">Home</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-8870" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8870"><a title="Track Order" target="_blank" href="https://www.devgadmango.com/track-devgad-mango/">Track Order</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-114" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114"><a title="Order Mangoes" href="/product/mango/">Order Mangoes</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-6449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6449"><a title="Order Products" href="https://www.devgadmango.com/products/">Order Products</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-269"><a title="Blog" href="https://www.devgadmango.com/blog/">Blog</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-116" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-116 dropdown"><a title="About" href="#" class="dropdown-toggle">About <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu" >
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-210" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210"><a title="About Devgad Alphonso Mango" href="https://www.devgadmango.com/about-devgad-alphonso-mango/">About Devgad Alphonso Mango</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-208"><a title="About Devgad Taluka" href="https://www.devgadmango.com/about-us/">About Devgad Taluka</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-209"><a title="Factory" href="https://www.devgadmango.com/factory/">Factory</a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-294" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-294"><a title="Mango Bonds" href="https://www.devgadmango.com/mango-bonds/">Mango Bonds</a></li>
+</ul></div>                                                <button id="close_nav">&times;</button>
+                                            </div>
+
+                                            <div class="pm-header-cart">
+                                                <ul id="site-header-cart" class="site-header-cart menu">
+                                                    <li class="">
+                                                        			<a class="cart-contents" href="https://www.devgadmango.com/cart/" title="View your shopping cart">
+								<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#8377;</span>0</span> <span class="count">0 items</span>
+			</a>
+		                                                    </li>
+
+                                                </ul>
+                                                                                                <p class="pmn-header-cart-count" style="display: none !important;">0</p>
+                                                                                            </div>
+
+                                                                                            <div class="login-btn">
+                                                    <a href="https://www.devgadmango.com/my-account/">LOGIN</a>
+                                                </div>
+                                                                                    
+
+                                        <button id="menu_btn" class="menu-btn">ME<span>NU</span></button>
+                                        <a href="https://www.devgadmango.com/product/mango/" class="nav-orbtn">Order Mangoes!</a>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </header><!-- #masthead -->
+
+            			
+			
+            <div class="pm-error-popup">
+                <div class="modal fade cart-modal" id="error_details_page">
+                    <div class="pm-error-message-wrapper">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header d-block d-lg-none">
+                                    <h3 class="pm-cart-title">Your Cart</h3>
+                                    <button type="button" class="close pm-close-cart-popup" data-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <button type="button" class="close d-none d-lg-block" data-dismiss="modal">&times;</button>
+
+                                    <p class="pm-error-message pm-strong-text" id="pm-error-messagecart"></p>
+                                    <a class="pm-modal-order-btn" href="https://www.devgadmango.com/product/mango">Order Mangoes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                            <script>
+                    function errorMessagecart(msg) {
+                        jQuery('#pm-error-messagecart').html(msg);
+
+                    }
+                    var cartCount = jQuery('.count').text();
+                    if (cartCount === '0') {
+                        jQuery('body').on('click', '.pm-header-cart', function () {
+                            jQuery('#error_details_page').modal();
+                            errorMessagecart("Your cart is empty!");
+
+                        });
+
+                    }
+					
+					if (cartCount !== '0') {
+                        jQuery('body').on('click', '.pm-header-cart', function () {
+                            window.location = jQuery(this).find("a").attr("href");
+                        });
+                    }
+
+                    var pmn_count = jQuery('p.pmn-header-cart-count').text();
+                    setTimeout(function(){
+                        jQuery('.pm-header-cart .site-header-cart .cart-contents span.count').html(pmn_count);
+                    }, 1000);
+
+                    setInterval(() => {
+                        jQuery('.pm-header-cart .site-header-cart .cart-contents span.count').html(pmn_count);
+                    }, 500);
+					
+                </script>
+            
+            <div id="content" class="site-content" tabindex="-1">
+                <!--                 <div class="col-full"> -->
+
+                    
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+		<div class="container">
+			<div class="row">
+    <div class="col-md-12">
+        <ul class="breadcrumb bred-dash mb-3 mt-4">
+            <li><a href="https://www.devgadmango.com" class="active">Home</a></li>
+            <li><span>Blog</span></li>
+			<li><span>Different Types of Mangoes In India You Should Know About!</span></li>        </ul>
+        <!--<h1 class="inner-head baloo-font mb-4">
+		Different Types of Mangoes In India You Should Know About!		</h1>-->
+    </div>
+				    </div>
+			
+		
+<article id="post-5301" class="post-5301 post type-post status-publish format-standard has-post-thumbnail hentry category-alphonso-mango">
+
+			<header class="entry-header">
+		
+			<span class="posted-on">Posted on <a href="https://www.devgadmango.com/types-of-mangoes-in-india/" rel="bookmark"><time class="entry-date published" datetime="2020-03-23T19:37:04+05:30">March 23, 2020</time><time class="updated" datetime="2020-05-26T18:05:11+05:30">May 26, 2020</time></a></span> <span class="post-author">by <a href="https://www.devgadmango.com/author/omkar/" rel="author">omkar</a></span> <span class="post-comments">&mdash; <a href="https://www.devgadmango.com/types-of-mangoes-in-india/#comments">3 Comments</a></span><h1 class="entry-title">Different Types of Mangoes In India You Should Know About!</h1>		</header><!-- .entry-header -->
+				<div class="entry-content">
+		<img width="1400" height="660" src="https://www.devgadmango.com/wp-content/uploads/2020/03/types-of-mangoes-in-india.jpg" class="attachment- size- wp-post-image" alt="types of mangoes in india" decoding="async" fetchpriority="high" srcset="https://www.devgadmango.com/wp-content/uploads/2020/03/types-of-mangoes-in-india.jpg 1400w, https://www.devgadmango.com/wp-content/uploads/2020/03/types-of-mangoes-in-india-416x196.jpg 416w, https://www.devgadmango.com/wp-content/uploads/2020/03/types-of-mangoes-in-india-300x141.jpg 300w, https://www.devgadmango.com/wp-content/uploads/2020/03/types-of-mangoes-in-india-1024x483.jpg 1024w, https://www.devgadmango.com/wp-content/uploads/2020/03/types-of-mangoes-in-india-768x362.jpg 768w" sizes="(max-width: 1400px) 100vw, 1400px" /><h2>A Comprehensive Guide to Different Types of Mangoes in India</h2>
+<p>There is no trace of doubt that Mango is the most loved and popular fruit in our beautiful country- India, and why shouldn&#8217;t it be? There is nothing more refreshing, delicious and silky smooth as a bite of mango.</p>
+<p>Did you know that there are 1500 varieties of mangoes cultivated in India? That’s more than any other fruit known to mankind. Now, with so many varieties, how does one decide? Fret not, that’s exactly what our blog is here to help you with.</p>
+<p>Sadly, we can’t go about mentioning all 1500, but we definitely will mention the 10 most adored and well-known types of mangoes that you need to try. Ready to enter mango land? Read on!</p>
+<h2>1. Banganapalli, also known as Safedi</h2>
+<p>Banganapalli is the earliest variety of mangoes in the market and is originally from the Andhra Pradesh town of Banaganapalle (Now you know how it gets its name).</p>
+<p><strong><a href="https://devgadmango.com/wp-content/uploads/2020/03/banganapalli-mango.png"><img decoding="async" class="alignright wp-image-8490 size-medium" src="https://devgadmango.com/wp-content/uploads/2020/03/banganapalli-mango-300x279.png" alt="banganapalli mango" width="300" height="279" srcset="https://www.devgadmango.com/wp-content/uploads/2020/03/banganapalli-mango-300x279.png 300w, https://www.devgadmango.com/wp-content/uploads/2020/03/banganapalli-mango-416x387.png 416w, https://www.devgadmango.com/wp-content/uploads/2020/03/banganapalli-mango.png 703w" sizes="(max-width: 300px) 100vw, 300px" /></a>Season:</strong> April- June</p>
+<p><strong>Color:</strong> Bright Yellow</p>
+<p><strong>Shape:</strong> Oval-shaped</p>
+<p><strong>Taste:</strong> Slightly Sour</p>
+<p><strong>Other Characteristics:</strong></p>
+<ul>
+<li>Skin is edible</li>
+<li>Mostly used to make preservatives</li>
+<li>Weighs less than other mango varieties.</li>
+</ul>
+<h2>2. Payri</h2>
+<p>The mango Payri just like Banganapalli marks the early beginning of the mango season. This variety of mango grows in Karnataka, Maharashtra &amp; Kerela</p>
+<figure id="attachment_8491" aria-describedby="caption-attachment-8491" style="width: 300px" class="wp-caption alignright"><a href="https://devgadmango.com/wp-content/uploads/2020/03/Payari-Mango.jpg"><img decoding="async" class="wp-image-8491 size-medium" src="https://devgadmango.com/wp-content/uploads/2020/03/Payari-Mango-300x199.jpg" alt="Payari Mango" width="300" height="199" srcset="https://www.devgadmango.com/wp-content/uploads/2020/03/Payari-Mango-300x199.jpg 300w, https://www.devgadmango.com/wp-content/uploads/2020/03/Payari-Mango-416x276.jpg 416w, https://www.devgadmango.com/wp-content/uploads/2020/03/Payari-Mango.jpg 545w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption id="caption-attachment-8491" class="wp-caption-text">Credit: sanctuaryasia.com</figcaption></figure>
+<p><strong>Season:</strong> April to June</p>
+<p><strong>Color:</strong> Yellow with Reddish Tinge on skin</p>
+<p><strong>Shape:</strong> Oval-shaped</p>
+<p><strong>Taste:</strong> Sweet with a noticeable sour taste</p>
+<p><strong>Other Characteristics:</strong></p>
+<ul>
+<li>Used to prepare aamras</li>
+<li>Quality doesn&#8217;t last for a long time so have them as soon as you can after purchasing them.</li>
+<li>Weighs 250 to 450 grams</li>
+</ul>
+<h2>3. Kesar</h2>
+<p>The Kesar mango has a distinctive fragrance to it that can liven up your house. It is grown and cultivated in the Girnar mountains of Gujarat, Ahmedabad and is named after the spice ‘saffron’.</p>
+<figure id="attachment_8492" aria-describedby="caption-attachment-8492" style="width: 300px" class="wp-caption alignright"><a href="https://devgadmango.com/wp-content/uploads/2020/03/fresh-kesar-mango.jpg"><img loading="lazy" decoding="async" class="wp-image-8492 size-medium" src="https://devgadmango.com/wp-content/uploads/2020/03/fresh-kesar-mango-300x300.jpg" alt="fresh-kesar-mango" width="300" height="300" srcset="https://www.devgadmango.com/wp-content/uploads/2020/03/fresh-kesar-mango-300x300.jpg 300w, https://www.devgadmango.com/wp-content/uploads/2020/03/fresh-kesar-mango-324x324.jpg 324w, https://www.devgadmango.com/wp-content/uploads/2020/03/fresh-kesar-mango-100x100.jpg 100w, https://www.devgadmango.com/wp-content/uploads/2020/03/fresh-kesar-mango-416x416.jpg 416w, https://www.devgadmango.com/wp-content/uploads/2020/03/fresh-kesar-mango-150x150.jpg 150w, https://www.devgadmango.com/wp-content/uploads/2020/03/fresh-kesar-mango.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption id="caption-attachment-8492" class="wp-caption-text">Credit: indiamart.com</figcaption></figure>
+<p><strong>Season:</strong> June to July</p>
+<p><strong>Color:</strong> Skin is dull yellow with a green tinge and inside pulp is saffron-colored.</p>
+<p><strong>Shape:</strong> Roundish shape with a curved tip</p>
+<p><strong>Taste:</strong> Sweet but Milder in taste than Alphonso&#8217;s</p>
+<p><strong>Other Characteristics:</strong></p>
+<ul>
+<li>Mostly used to make aamras</li>
+<li>Size is small to medium</li>
+<li>A bit expensive than other types of mangoes</li>
+</ul>
+<h2>4. Neelum</h2>
+<p>The Neelam mango is primarily grown in Tamil Nadu, Karnataka, and Andhra Pradesh and a favorite in Hyderabad. They have a lovely fragrance to them and are available throughout the season, in fact, the best produce (tastiest) is seen during the monsoon season.</p>
+<figure id="attachment_8493" aria-describedby="caption-attachment-8493" style="width: 300px" class="wp-caption alignright"><a href="https://devgadmango.com/wp-content/uploads/2020/03/Neelam-Mango.jpg"><img loading="lazy" decoding="async" class="wp-image-8493 size-medium" src="https://devgadmango.com/wp-content/uploads/2020/03/Neelam-Mango-300x300.jpg" alt="Neelam Mango" width="300" height="300" srcset="https://www.devgadmango.com/wp-content/uploads/2020/03/Neelam-Mango-300x300.jpg 300w, https://www.devgadmango.com/wp-content/uploads/2020/03/Neelam-Mango-324x324.jpg 324w, https://www.devgadmango.com/wp-content/uploads/2020/03/Neelam-Mango-100x100.jpg 100w, https://www.devgadmango.com/wp-content/uploads/2020/03/Neelam-Mango-416x416.jpg 416w, https://www.devgadmango.com/wp-content/uploads/2020/03/Neelam-Mango-1024x1024.jpg 1024w, https://www.devgadmango.com/wp-content/uploads/2020/03/Neelam-Mango-150x150.jpg 150w, https://www.devgadmango.com/wp-content/uploads/2020/03/Neelam-Mango-768x768.jpg 768w, https://www.devgadmango.com/wp-content/uploads/2020/03/Neelam-Mango.jpg 1200w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption id="caption-attachment-8493" class="wp-caption-text">Credit: luluhypermarket.com</figcaption></figure>
+<p><strong>Season:</strong> May to July</p>
+<p><strong>Color:</strong> Saffron yellow with a red tinge</p>
+<p><strong>Shape:</strong> Ovate Oblique</p>
+<p><strong>Taste:</strong> Combination of sweet and sour</p>
+<p><strong>Other Characteristics:</strong></p>
+<ul>
+<li>Excellent keeping quality</li>
+<li>Great for transport due to high keeping quality</li>
+<li>Medium-sized</li>
+<li>Tinier than most other mango types.</li>
+</ul>
+<h2>5. Alphonso/Hapus</h2>
+<p><a href="https://devgadmango.com/about-devgad-alphonso-mango/">Alphonso mango</a> is unlike any other type of mango and is the king of all mangoes. It is a native to Maharashtra but is also grown in some parts of Gujarat, Karnataka and Madhya Pradesh. It is the most expensive variety of mango due to its distinct taste, color, and shape.</p>
+<p><strong><a href="https://devgadmango.com/wp-content/uploads/2019/11/orignal-mango.png"><img loading="lazy" decoding="async" class="alignright wp-image-382 size-medium" src="https://devgadmango.com/wp-content/uploads/2019/11/orignal-mango-249x300.png" alt="Original Alphonso Mango" width="249" height="300" srcset="https://www.devgadmango.com/wp-content/uploads/2019/11/orignal-mango-249x300.png 249w, https://www.devgadmango.com/wp-content/uploads/2019/11/orignal-mango.png 356w" sizes="(max-width: 249px) 100vw, 249px" /></a>Season:</strong> May to June</p>
+<p><strong>Color:</strong> Bright golden yellow with a tinge of red.</p>
+<p><strong>Shape:</strong> Voluptuous Oval-shaped (ovate oblique)</p>
+<p><strong>Taste:</strong> Sweet with Rich flavor &amp; creamy texture</p>
+<p><strong>Other Characteristics:</strong></p>
+<ul>
+<li>Non- fibrous and juicy pulp</li>
+<li>Popular all around the world</li>
+<li>Medium-sized (4-6 inches long)</li>
+</ul>
+<p style="text-align: center;"><a id="" class="pmas-blog-a-button " href="/product/mango/">Get Yourself a Box of Authentic Alphonso Mangoes!</a></p>
+<h2>6. Dasheri</h2>
+<p>This is the popular “chusne wala aam”. The homeland of this mango is Uttar Pradesh. It is the oldest variety of mango, and were first grown by the Nawabs of India.</p>
+<figure id="attachment_8494" aria-describedby="caption-attachment-8494" style="width: 300px" class="wp-caption alignright"><a href="https://devgadmango.com/wp-content/uploads/2020/03/Dasheri-Mango.jpeg"><img loading="lazy" decoding="async" class="wp-image-8494 size-medium" src="https://devgadmango.com/wp-content/uploads/2020/03/Dasheri-Mango-300x225.jpeg" alt="Dasheri Mango" width="300" height="225" srcset="https://www.devgadmango.com/wp-content/uploads/2020/03/Dasheri-Mango-300x225.jpeg 300w, https://www.devgadmango.com/wp-content/uploads/2020/03/Dasheri-Mango-416x312.jpeg 416w, https://www.devgadmango.com/wp-content/uploads/2020/03/Dasheri-Mango-1024x768.jpeg 1024w, https://www.devgadmango.com/wp-content/uploads/2020/03/Dasheri-Mango-768x576.jpeg 768w, https://www.devgadmango.com/wp-content/uploads/2020/03/Dasheri-Mango.jpeg 1200w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption id="caption-attachment-8494" class="wp-caption-text">Credit: wikipedia.com</figcaption></figure>
+<p><strong>Season:</strong> June to July</p>
+<p><strong>Color:</strong> Yellow-green</p>
+<p><strong>Shape:</strong> Elongated</p>
+<p><strong>Taste:</strong> Extremely sweet</p>
+<p><strong>Other Characteristics:</strong></p>
+<ul>
+<li>Fibreless</li>
+<li>Used to make a variety of chutneys</li>
+<li>Medium-sized seed</li>
+</ul>
+<h2>7. Totapuri</h2>
+<p>The Totapuri mango is the easiest type of mango to identify due to its parrot beak-like shape at the tip, hence symbolizing its name. It is from Andhra Pradesh, Karnataka, Telangana and Tamil Nadu i.e Southern part of India.</p>
+<figure id="attachment_8495" aria-describedby="caption-attachment-8495" style="width: 300px" class="wp-caption alignright"><a href="https://devgadmango.com/wp-content/uploads/2020/03/totapuri-mango.jpg"><img loading="lazy" decoding="async" class="wp-image-8495 size-medium" src="https://devgadmango.com/wp-content/uploads/2020/03/totapuri-mango-300x216.jpg" alt="totapuri-mango" width="300" height="216" srcset="https://www.devgadmango.com/wp-content/uploads/2020/03/totapuri-mango-300x216.jpg 300w, https://www.devgadmango.com/wp-content/uploads/2020/03/totapuri-mango.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption id="caption-attachment-8495" class="wp-caption-text">Credit: indiamart.com</figcaption></figure>
+<p><strong>Season:</strong> June to July</p>
+<p><strong>Color:</strong> Golden Yellow</p>
+<p><strong>Shape:</strong> Oblong with beak like pointed end</p>
+<p><strong>Taste:</strong> Not Sweet</p>
+<p><strong>Other Characteristics:</strong></p>
+<ul>
+<li>Great for salads, pickles and mango juices.</li>
+<li>Large in size</li>
+<li>Skin is very thick</li>
+</ul>
+<h2>8. Chausa</h2>
+<p>Back when Sher Shah Suri wanted to celebrate his victory over Humayun, he named his favourite mango- Chausa, the town of Bihar where these mangoes are grown and cultivated. These are seen at the end of the mango season.</p>
+<figure id="attachment_8496" aria-describedby="caption-attachment-8496" style="width: 300px" class="wp-caption alignright"><a href="https://devgadmango.com/wp-content/uploads/2020/03/Chausa-Mango.jpg"><img loading="lazy" decoding="async" class="wp-image-8496 size-medium" src="https://devgadmango.com/wp-content/uploads/2020/03/Chausa-Mango-300x219.jpg" alt="Chausa Mango" width="300" height="219" srcset="https://www.devgadmango.com/wp-content/uploads/2020/03/Chausa-Mango-300x219.jpg 300w, https://www.devgadmango.com/wp-content/uploads/2020/03/Chausa-Mango-416x304.jpg 416w, https://www.devgadmango.com/wp-content/uploads/2020/03/Chausa-Mango.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption id="caption-attachment-8496" class="wp-caption-text">Credit: Amazon.in</figcaption></figure>
+<p><strong>Season:</strong> July to August</p>
+<p><strong>Color:</strong> Bright yellow</p>
+<p><strong>Shape:</strong> ovate (egg-like) to oval oblique</p>
+<p><strong>Taste:</strong> Extremely sweet and aromatic</p>
+<p><strong>Other Characteristics:</strong></p>
+<ul>
+<li>Mostly found in North India</li>
+<li>Fibrous flesh &amp; juicy pulp</li>
+<li>Medium keeping quality and exported.</li>
+</ul>
+<h2>9. Himsagar</h2>
+<p>Amongst all the varieties of mangoes, this variety has the shortest season span of them all. Himsagar originates in Northeast regions of India such as West Bengal.</p>
+<figure id="attachment_8497" aria-describedby="caption-attachment-8497" style="width: 300px" class="wp-caption alignright"><a href="https://devgadmango.com/wp-content/uploads/2020/03/himsagar-mango.jpg"><img loading="lazy" decoding="async" class="size-medium wp-image-8497" src="https://devgadmango.com/wp-content/uploads/2020/03/himsagar-mango-300x225.jpg" alt="himsagar-mango" width="300" height="225" srcset="https://www.devgadmango.com/wp-content/uploads/2020/03/himsagar-mango-300x225.jpg 300w, https://www.devgadmango.com/wp-content/uploads/2020/03/himsagar-mango-416x312.jpg 416w, https://www.devgadmango.com/wp-content/uploads/2020/03/himsagar-mango.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption id="caption-attachment-8497" class="wp-caption-text">Credit: indiamart.com</figcaption></figure>
+<p><strong>Season:</strong> May or June</p>
+<p><strong>Color:</strong> Green skin and bright yellow pulp</p>
+<p><strong>Shape:</strong> Ovate (egg like) shape</p>
+<p><strong>Taste:</strong> Extremely sweet</p>
+<p><strong>Other Characteristics:</strong></p>
+<ul>
+<li>Thin skin &amp; known for its aroma</li>
+<li>Good keeping quality</li>
+<li>Medium-sized</li>
+<li>Fibreless and fleshy</li>
+</ul>
+<h2>10. Langra:</h2>
+<p>This variety of mango was first grown by a farmer in Varanasi (Benaras) who was unfortunately disabled (limp) hence the name Langra came into being. It is very popular in West Bengal, Haryana, Bihar and Uttar Pradesh.</p>
+<figure id="attachment_8498" aria-describedby="caption-attachment-8498" style="width: 250px" class="wp-caption alignright"><a href="https://devgadmango.com/wp-content/uploads/2020/03/langra-mango.jpg"><img loading="lazy" decoding="async" class="size-full wp-image-8498" src="https://devgadmango.com/wp-content/uploads/2020/03/langra-mango.jpg" alt="langra-mango" width="250" height="250" srcset="https://www.devgadmango.com/wp-content/uploads/2020/03/langra-mango.jpg 250w, https://www.devgadmango.com/wp-content/uploads/2020/03/langra-mango-100x100.jpg 100w, https://www.devgadmango.com/wp-content/uploads/2020/03/langra-mango-150x150.jpg 150w" sizes="(max-width: 250px) 100vw, 250px" /></a><figcaption id="caption-attachment-8498" class="wp-caption-text">Credit: indiamart.com</figcaption></figure>
+<p><strong>Season:</strong> Mid July to August</p>
+<p><strong>Color:</strong> Green</p>
+<p><strong>Shape:</strong> Ovate (egg-like)</p>
+<p><strong>Taste:</strong> Sweet</p>
+<p><strong>Other Characteristics:</strong></p>
+<ul>
+<li>Fibrous</li>
+<li>High level of natural sugar</li>
+<li>Poor keeping quality</li>
+<li>Very thin skin</li>
+<li>Once ripened, it releases a very strong aroma.</li>
+</ul>
+<h2>Conclusion:</h2>
+<p>Now that you know the most popular and adored types of mangoes in India, you don’t need to be taken aback on which one to choose. It’s time to pick your favorite mango and enjoy it while the season lasts!</p>
+		</div><!-- .entry-content -->
+		
+		<aside class="entry-taxonomy">
+						<div class="cat-links">
+				Category: <a href="https://www.devgadmango.com/category/alphonso-mango/" rel="category tag">Alphonso Mango</a>			</div>
+			
+					</aside>
+
+		<nav id="post-navigation" class="navigation post-navigation" role="navigation" aria-label="Post Navigation"><h2 class="screen-reader-text">Post navigation</h2><div class="nav-links"><div class="nav-previous"><a href="https://www.devgadmango.com/alphonso-mango-facts/" rel="prev"><span class="screen-reader-text">Previous post: </span>6 Mind-blowing Facts You Didn&#8217;t Know About the Alphonso Mango</a></div><div class="nav-next"><a href="https://www.devgadmango.com/5-must-try-recipes-with-aamras-pulp/" rel="next"><span class="screen-reader-text">Next post: </span>5 Must-Try Recipes with Aamras (Pulp)</a></div></div></nav>
+<section id="comments" class="comments-area" aria-label="Post Comments">
+
+			<h2 class="comments-title">
+			3 thoughts on &ldquo;<span>Different Types of Mangoes In India You Should Know About!</span>&rdquo;		</h2>
+
+		
+		<ol class="comment-list">
+					<li class="pingback even thread-even depth-1" id="comment-177582">
+		<div class="comment-body">
+		<div class="comment-meta commentmetadata">
+			<div class="comment-author vcard">
+						<cite class="fn"><a href="https://www.priyamahal-tokyo.com/2021/05/03/%e3%83%9e%e3%83%8f%e3%83%a9%e3%82%b7%e3%83%a5%e3%83%88%e3%83%a9%e3%81%ae%e3%83%9e%e3%83%b3%e3%82%b4%e3%83%bc/" class="url" rel="ugc external nofollow">マハラシュトラのマンゴー | Priya Mahal Tokyo</a></cite>			</div>
+			
+			<a href="https://www.devgadmango.com/types-of-mangoes-in-india/#comment-177582" class="comment-date">
+				<time datetime="2021-05-03T11:40:56+05:30">May 3, 2021</time>			</a>
+		</div>
+				<div id="div-comment-177582" class="comment-content">
+				<div class="comment-text">
+		<p>[&#8230;] Different Types of Mangoes In India You Should Know About! [&#8230;]</p>
+		</div>
+		<div class="reply">
+						</div>
+		</div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="pingback odd alt thread-odd thread-alt depth-1" id="comment-192863">
+		<div class="comment-body">
+		<div class="comment-meta commentmetadata">
+			<div class="comment-author vcard">
+						<cite class="fn"><a href="https://lindien.se/2022/05/14/mangosasong-i-bangalore/" class="url" rel="ugc external nofollow">Mangosäsong i Bangalore - Lindien</a></cite>			</div>
+			
+			<a href="https://www.devgadmango.com/types-of-mangoes-in-india/#comment-192863" class="comment-date">
+				<time datetime="2022-05-15T00:02:17+05:30">May 15, 2022</time>			</a>
+		</div>
+				<div id="div-comment-192863" class="comment-content">
+				<div class="comment-text">
+		<p>[&#8230;] Eftersom jag aldrig tidigare ätit mango i Indien frågade vi en Bangalore-bo. Skulle den smaka så här? Eller var den inte mogen? Efter att ha tagit en liten bit ljusgult fruktkött berättade hon att den smakade precis som den skulle. Och när jag nämnde att all mango jag tidigare ätit smakat annorlunda påpekade hon att det ju finns mängder av mangosorter som alla smakar olika, inte minst i Indien <a href="https://www.devgadmango.com/types-of-mangoes-in-india/" rel="ugc">https://www.devgadmango.com/types-of-mangoes-in-india/</a>. [&#8230;]</p>
+		</div>
+		<div class="reply">
+						</div>
+		</div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="pingback even thread-even depth-1" id="comment-193871">
+		<div class="comment-body">
+		<div class="comment-meta commentmetadata">
+			<div class="comment-author vcard">
+						<cite class="fn"><a href="https://blog.bijak.in/2022/05/27/top-10-mango-varieties-grown-in-india/" class="url" rel="ugc external nofollow">Top 10 Mango Varieties Grown In India - Bijak Blog</a></cite>			</div>
+			
+			<a href="https://www.devgadmango.com/types-of-mangoes-in-india/#comment-193871" class="comment-date">
+				<time datetime="2022-05-27T20:00:32+05:30">May 27, 2022</time>			</a>
+		</div>
+				<div id="div-comment-193871" class="comment-content">
+				<div class="comment-text">
+		<p>[&#8230;] Kesar mangoes got their name as the color of their pulp resembles saffron, a spice used in Indian kitchens. This variety of mango is popularly known as the ‘queen of mangoes’ in India. Junagarh, in Gujarat, is the place where juicy Kesar mangoes are grown and distributed all over the country. When it comes to export, the demand for Kesar mangoes is higher in the US as a large Gujarati community prefers Kesar over Alphonso. In 2020, of the total mango exports from the country, Kesar accounted for 50-55% of the total outbound shipment. [&#8230;]</p>
+		</div>
+		<div class="reply">
+						</div>
+		</div>
+				</div>
+				</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+				<p class="no-comments">Comments are closed.</p>
+		
+</section><!-- #comments -->
+
+</article><!-- #post-## -->
+			</div>
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<!-- </div><!-- .col-full -->
+</div><!-- #content -->
+
+
+
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="pm-top-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="footer-nav">
+                        <li class="footer-link"></li>
+                        <li class="footer-link">
+                            <p class="active">Order <i></i></p>
+                            <ul>
+                                <li><a href="https://www.devgadmango.com/product/mango/">Devgad Alphonso Mangoes</a></li>
+                                <li><a href="https://www.devgadmango.com/mango-bonds/">Mango Bonds</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer-link">
+                            <p>About Us <i></i></p>
+                            <ul>
+                                <li><a href="https://www.devgadmango.com/about-devgad-alphonso-mango">About Devgad Alphonso Mango</a></li>
+                                <li><a href="https://www.devgadmango.com/about-us/">About Devgad Taluka</a></li>
+                                <li><a href="https://www.devgadmango.com/factory/">Factory</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer-link">
+                            <p>Blog <i></i></p>
+                                                       
+                            <ul>
+                                                                                        <li><a href="https://www.devgadmango.com/5-must-try-recipes-with-aamras-pulp/">5 Must-Try Recipes with Aamras (Pulp)</a></li>
+                                                            <li><a href="https://www.devgadmango.com/types-of-mangoes-in-india/">Different Types of Mangoes In India You Should Know About!</a></li>
+                                                                                                                    <a href="https://www.devgadmango.com/blog/" class="link-vmf">View more</a>
+                            </ul>
+
+                        </li>
+                        <li class="footer-link">
+                            <p>Other <i></i></p>
+                            <ul>
+                                <li><a href="https://www.devgadmango.com/mango-grades/">Mango Grades</a></li>
+                                <li><a href="https://www.devgadmango.com/contact-us/">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer-link">
+                            <p>Terms and Policies <i></i></p>
+                            <ul>
+                                <li><a href="https://www.devgadmango.com/terms-conditions">Terms & Conditions</a></li>
+                                <li><a href="https://www.devgadmango.com/faq">FAQs</a></li>
+                                <li><a href="https://www.devgadmango.com/return-policy">Return Policy</a></li>
+                                <li><a href="https://www.devgadmango.com/privacy-policy">Privacy Policy</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sec-tandc btn-padd">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8 col-6">
+                    <ul class="tns-list">
+                        <li><a href="https://www.devgadmango.com/terms-conditions">Terms & Conditions</a></li>
+                        <li><a href="https://www.devgadmango.com/faq">FAQs</a></li>
+                        <li><a href="https://www.devgadmango.com/return-policy">Return Policy</a></li>
+                        <li><a href="https://www.devgadmango.com/privacy-policy">Privacy Policy</a></li>
+                    </ul>
+                    <ul class="footer-social">
+                        <li><a href="https://twitter.com/devgadmango" target='_blank'><img src="https://www.devgadmango.com/wp-content/themes/storefront-child-copy-1/assets/images/twitter.png" alt="Twitter Icon" /></a></li>
+                        <li><a href="https://instagram.com/devgadmango?igshid=vvb9cie2zc8q" target='_blank'><img src="https://www.devgadmango.com/wp-content/themes/storefront-child-copy-1/assets/images/instagram.png" alt="Instagram Icon" /></a></li>
+                        <li><a href="https://www.facebook.com/devgadmango/" target='_blank'><img src="https://www.devgadmango.com/wp-content/themes/storefront-child-copy-1/assets/images/facebook.png" alt="Facebook Icon" /></a></li>
+                        <li><a href="https://www.youtube.com/user/devgadmango" target='_blank'><img src="https://www.devgadmango.com/wp-content/themes/storefront-child-copy-1/assets/images/youtube.png" alt="Youtube Icon" /></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-6 text-right">
+                    <span>&copy;2019-20 Devgadmango</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer><!-- #colophon -->
+    
+
+
+
+
+
+</div><!-- #page -->
+
+DEOGAD TALUKA AMBA UTPADAK SAHAKARI SANSTHA LIMITED
+73/2 JAMSANDE BAZARPETH,DEVGAD NIPANI ROAD,, DEVGAD,SINDHUDURG,, MAHARASHTRA 416613,
++919022112269<!-- Click to Chat - https://holithemes.com/plugins/click-to-chat/  v3.8 -->  
+            <div class="ht-ctc ht-ctc-chat ctc-analytics ctc_wp_desktop style-2  " id="ht-ctc-chat"  
+                style="display: none;  position: fixed; bottom: 10px; right: 10px;"   >
+                                <div class="ht_ctc_style ht_ctc_chat_style">
+                <div title = 'WhatsApp us' style="display: flex; justify-content: center; align-items: center;  " class="ctc-analytics">
+    <p class="ctc-analytics ctc_cta ht-ctc-cta " style="padding: 0px 16px; line-height: 1.6; ; background-color: #25D366; color: #ffffff; border-radius:10px; margin:0 10px;  display: none; ">WhatsApp us</p>
+    <svg style="pointer-events:none; display:block; height:50px; width:50px;" width="50px" height="50px" viewBox="0 0 1024 1024">
+    <defs>
+    <path id="htwasqicona-chat" d="M1023.941 765.153c0 5.606-.171 17.766-.508 27.159-.824 22.982-2.646 52.639-5.401 66.151-4.141 20.306-10.392 39.472-18.542 55.425-9.643 18.871-21.943 35.775-36.559 50.364-14.584 14.56-31.472 26.812-50.315 36.416-16.036 8.172-35.322 14.426-55.744 18.549-13.378 2.701-42.812 4.488-65.648 5.3-9.402.336-21.564.505-27.15.505l-504.226-.081c-5.607 0-17.765-.172-27.158-.509-22.983-.824-52.639-2.646-66.152-5.4-20.306-4.142-39.473-10.392-55.425-18.542-18.872-9.644-35.775-21.944-50.364-36.56-14.56-14.584-26.812-31.471-36.415-50.314-8.174-16.037-14.428-35.323-18.551-55.744-2.7-13.378-4.487-42.812-5.3-65.649-.334-9.401-.503-21.563-.503-27.148l.08-504.228c0-5.607.171-17.766.508-27.159.825-22.983 2.646-52.639 5.401-66.151 4.141-20.306 10.391-39.473 18.542-55.426C34.154 93.24 46.455 76.336 61.07 61.747c14.584-14.559 31.472-26.812 50.315-36.416 16.037-8.172 35.324-14.426 55.745-18.549 13.377-2.701 42.812-4.488 65.648-5.3 9.402-.335 21.565-.504 27.149-.504l504.227.081c5.608 0 17.766.171 27.159.508 22.983.825 52.638 2.646 66.152 5.401 20.305 4.141 39.472 10.391 55.425 18.542 18.871 9.643 35.774 21.944 50.363 36.559 14.559 14.584 26.812 31.471 36.415 50.315 8.174 16.037 14.428 35.323 18.551 55.744 2.7 13.378 4.486 42.812 5.3 65.649.335 9.402.504 21.564.504 27.15l-.082 504.226z"/>
+    </defs>
+    <linearGradient id="htwasqiconb-chat" gradientUnits="userSpaceOnUse" x1="512.001" y1=".978" x2="512.001" y2="1025.023">
+        <stop offset="0" stop-color="#61fd7d"/>
+        <stop offset="1" stop-color="#2bb826"/>
+    </linearGradient>
+    <use xlink:href="#htwasqicona-chat" overflow="visible" fill="url(#htwasqiconb-chat)"/>
+    <g>
+        <path fill="#FFF" d="M783.302 243.246c-69.329-69.387-161.529-107.619-259.763-107.658-202.402 0-367.133 164.668-367.214 367.072-.026 64.699 16.883 127.854 49.017 183.522l-52.096 190.229 194.665-51.047c53.636 29.244 114.022 44.656 175.482 44.682h.151c202.382 0 367.128-164.688 367.21-367.094.039-98.087-38.121-190.319-107.452-259.706zM523.544 808.047h-.125c-54.767-.021-108.483-14.729-155.344-42.529l-11.146-6.612-115.517 30.293 30.834-112.592-7.259-11.544c-30.552-48.579-46.688-104.729-46.664-162.379.066-168.229 136.985-305.096 305.339-305.096 81.521.031 158.154 31.811 215.779 89.482s89.342 134.332 89.312 215.859c-.066 168.243-136.984 305.118-305.209 305.118zm167.415-228.515c-9.177-4.591-54.286-26.782-62.697-29.843-8.41-3.062-14.526-4.592-20.645 4.592-6.115 9.182-23.699 29.843-29.053 35.964-5.352 6.122-10.704 6.888-19.879 2.296-9.176-4.591-38.74-14.277-73.786-45.526-27.275-24.319-45.691-54.359-51.043-63.543-5.352-9.183-.569-14.146 4.024-18.72 4.127-4.109 9.175-10.713 13.763-16.069 4.587-5.355 6.117-9.183 9.175-15.304 3.059-6.122 1.529-11.479-.765-16.07-2.293-4.591-20.644-49.739-28.29-68.104-7.447-17.886-15.013-15.466-20.645-15.747-5.346-.266-11.469-.322-17.585-.322s-16.057 2.295-24.467 11.478-32.113 31.374-32.113 76.521c0 45.147 32.877 88.764 37.465 94.885 4.588 6.122 64.699 98.771 156.741 138.502 21.892 9.45 38.982 15.094 52.308 19.322 21.98 6.979 41.982 5.995 57.793 3.634 17.628-2.633 54.284-22.189 61.932-43.615 7.646-21.427 7.646-39.791 5.352-43.617-2.294-3.826-8.41-6.122-17.585-10.714z"/>
+    </g>
+    </svg></div>                </div>
+            </div>
+                        <span class="ht_ctc_chat_data" 
+                data-no_number=""
+                data-settings="{&quot;number&quot;:&quot;919022112269&quot;,&quot;pre_filled&quot;:&quot;Hey Devgad Mango, I can see that you have closed orders for Season 2023 and now accepting orders for Season 2024, at the rates of Season 2022. We appreciate that even though inflation is rising and everything is expensive this year, you are accepting orders for 2024 at 2022 rates. I will order Devgad Mangoes for Season 2024 right away!&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;display: none; cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 10px; right: 10px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 10px; right: 10px;&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:&quot;no-show-effects&quot;,&quot;ani&quot;:&quot;no-animations&quot;,&quot;web&quot;:&quot;y&quot;}" 
+            ></span>
+            	<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link rel='stylesheet' id='woof_tooltip-css-css' href='https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/js/tooltip/css/tooltipster.bundle.min.css?ver=1681569049' media='all' />
+<link rel='stylesheet' id='woof_tooltip-css-noir-css' href='https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/js/tooltip/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-noir.min.css?ver=1681569049' media='all' />
+<style id='core-block-supports-inline-css'>
+/**
+ * Core styles: block-supports
+ */
+
+</style>
+<script id="ht_ctc_app_js-js-extra">
+var ht_ctc_chat_var = {"number":"919022112269","pre_filled":"Hey Devgad Mango, I can see that you have closed orders for Season 2023 and now accepting orders for Season 2024, at the rates of Season 2022. We appreciate that even though inflation is rising and everything is expensive this year, you are accepting orders for 2024 at 2022 rates. I will order Devgad Mangoes for Season 2024 right away!","dis_m":"show","dis_d":"show","css":"display: none; cursor: pointer; z-index: 99999999;","pos_d":"position: fixed; bottom: 10px; right: 10px;","pos_m":"position: fixed; bottom: 10px; right: 10px;","schedule":"no","se":"no-show-effects","ani":"no-animations","web":"y"};
+</script>
+<script src="https://www.devgadmango.com/wp-content/plugins/click-to-chat-for-whatsapp/new/inc/assets/js/332.app.js?ver=1681569051" id="ht_ctc_app_js-js"></script>
+<script src="https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.js?ver=1681569050" id="jquery-blockui-js"></script>
+<script src="https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.js?ver=1681569050" id="js-cookie-js"></script>
+<script id="woocommerce-js-extra">
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+</script>
+<script src="https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.js?ver=1681569050" id="woocommerce-js"></script>
+<script id="wc-cart-fragments-js-extra">
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_8ffa4380f36ccd2849882b58632b5759","fragment_name":"wc_fragments_8ffa4380f36ccd2849882b58632b5759","request_timeout":"5000"};
+</script>
+<script src="https://www.devgadmango.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.js?ver=1681569050" id="wc-cart-fragments-js"></script>
+<script src="https://www.devgadmango.com/wp-content/themes/storefront-child-copy-1/assets/bootstrap-4/js/bootstrap.min.js?ver=1678956538" id="bootstrapjs-js"></script>
+<script src="https://www.devgadmango.com/wp-content/themes/storefront-child-copy-1/assets/magnific/jquery.magnific-popup.min.js?ver=1678956538" id="jquery.magnific-popup.min.js-js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js?ver=1708761811" id="slick-js-js"></script>
+<script src="https://www.devgadmango.com/wp-content/themes/storefront/assets/js/navigation.js?ver=1678955976" id="storefront-navigation-js"></script>
+<script src="https://www.devgadmango.com/wp-content/themes/storefront/assets/js/woocommerce/header-cart.js?ver=1678955976" id="storefront-header-cart-js"></script>
+<script src="https://www.devgadmango.com/wp-content/themes/storefront/assets/js/footer.js?ver=1678955976" id="storefront-handheld-footer-bar-js"></script>
+<script src="https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/js/tooltip/js/tooltipster.bundle.min.js?ver=1681569049" id="woof_tooltip-js-js"></script>
+<script id="woof_front-js-extra">
+var woof_filter_titles = {"product_cat":"Product categories"};
+</script>
+<script id="woof_front-js-before">
+var woof_is_permalink =1;
+        var woof_shop_page = "";
+                var woof_m_b_container =".woocommerce-products-header";
+        var woof_really_curr_tax = {};
+        var woof_current_page_link = location.protocol + '//' + location.host + location.pathname;
+        /*lets remove pagination from woof_current_page_link*/
+        woof_current_page_link = woof_current_page_link.replace(/\page\/[0-9]+/, "");
+                        woof_current_page_link = "https://www.devgadmango.com/products/";
+                        var woof_link = 'https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/';
+        
+        var woof_ajaxurl = "https://www.devgadmango.com/wp-admin/admin-ajax.php";
+
+        var woof_lang = {
+        'orderby': "orderby",
+        'date': "date",
+        'perpage': "per page",
+        'pricerange': "price range",
+        'menu_order': "menu order",
+        'popularity': "popularity",
+        'rating': "rating",
+        'price': "price low to high",
+        'price-desc': "price high to low",
+        'clear_all': "Clear All"
+        };
+
+        if (typeof woof_lang_custom == 'undefined') {
+        var woof_lang_custom = {};/*!!important*/
+        }
+
+        var woof_is_mobile = 0;
+        
+
+
+        var woof_show_price_search_button = 0;
+        var woof_show_price_search_type = 0;
+        
+        var woof_show_price_search_type = 0;
+
+        var swoof_search_slug = "swoof";
+
+        
+        var icheck_skin = {};
+                    icheck_skin = 'none';
+        
+        var is_woof_use_chosen =1;
+
+                var woof_current_values = '[]';
+                var woof_lang_loading = "Loading ...";
+
+        
+        var woof_lang_show_products_filter = "show products filter";
+        var woof_lang_hide_products_filter = "hide products filter";
+        var woof_lang_pricerange = "price range";
+
+        var woof_use_beauty_scroll =0;
+
+        var woof_autosubmit =1;
+        var woof_ajaxurl = "https://www.devgadmango.com/wp-admin/admin-ajax.php";
+        /*var woof_submit_link = "";*/
+        var woof_is_ajax = 0;
+        var woof_ajax_redraw = 0;
+        var woof_ajax_page_num =1;
+        var woof_ajax_first_done = false;
+        var woof_checkboxes_slide_flag = true;
+
+
+        /*toggles*/
+        var woof_toggle_type = "text";
+
+        var woof_toggle_closed_text = "-";
+        var woof_toggle_opened_text = "+";
+
+        var woof_toggle_closed_image = "https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/img/plus3.png";
+        var woof_toggle_opened_image = "https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/img/minus3.png";
+
+
+        /*indexes which can be displayed in red buttons panel*/
+                var woof_accept_array = ["min_price", "orderby", "perpage", "min_rating","product_visibility","product_cat","product_tag"];
+
+        
+        /*for extensions*/
+
+        var woof_ext_init_functions = null;
+        
+
+        
+        var woof_overlay_skin = "default";
+
+
+        function woof_js_after_ajax_done() {
+        jQuery(document).trigger('woof_ajax_done');
+                }
+</script>
+<script src="https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/js/front.js?ver=1681569049" id="woof_front-js"></script>
+<script src="https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/js/html_types/radio.js?ver=1681569049" id="woof_radio_html_items-js"></script>
+<script src="https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/js/html_types/checkbox.js?ver=1681569049" id="woof_checkbox_html_items-js"></script>
+<script src="https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/js/html_types/select.js?ver=1681569049" id="woof_select_html_items-js"></script>
+<script src="https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/js/html_types/mselect.js?ver=1681569049" id="woof_mselect_html_items-js"></script>
+<script src="https://www.devgadmango.com/wp-content/plugins/woocommerce-products-filter/js/chosen/chosen.jquery.js?ver=1681569049" id="chosen-drop-down-js"></script>
+<!-- WooCommerce JavaScript -->
+<script type="text/javascript">
+jQuery(function($) { 
+
+ga( 'send', 'pageview' );
+
+ });
+</script>
+
+<script>
+    jQuery("#menu_btn").click(function () {
+        jQuery(".nav-container").addClass('open');
+    });
+    jQuery("#close_nav").click(function () {
+        jQuery(".nav-container").removeClass('open');
+    });
+    
+    //    footer
+    jQuery(".footer-link p i").click(function () {
+        jQuery(this).parent().toggleClass('active');
+    });
+    jQuery('.pm-video-popup').magnificPopup({
+        type: 'iframe',
+        iframe: {
+            markup: '<div class="mfp-iframe-scaler">' +
+                    '<div class="mfp-close"></div>' +
+                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                    '<div class="mfp-title">Some caption</div>' +
+                    '</div>'
+        },
+        callbacks: {
+            markupParse: function (template, values, item) {
+                values.title = item.el.attr('title');
+            }
+        }
+    });
+    
+    
+</script>
+
+</body>
+</html>
